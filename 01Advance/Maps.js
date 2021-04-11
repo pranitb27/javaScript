@@ -29,3 +29,8 @@ for (var value of bikes.values()) {
 for (var [key,value] of bikes.entries()) {
   console.log(`Key name ${key}: ${value.name} belongs to ${value.company}`);
 }
+
+console.log('\nusing For forEach loop');
+bikes.forEach((value, key) => {
+  console.log(`Key name ${key}: ${value.name} belongs to ${value.company}`);
+});
