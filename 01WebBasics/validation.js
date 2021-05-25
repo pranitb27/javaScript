@@ -15,7 +15,7 @@ document.querySelector('.myform').addEventListener('submit',(event) => {
   let b = event.target.realname.value;
   if (a !== b){
     event.preventDefault();
-    addNewPara("The username and realname does not match");
+    addNewPara("The username and realname does not match")
   }
   else {
       console.log("Data sumbitted : " + a + " " + b);
@@ -26,5 +26,7 @@ document.querySelector('.myform').addEventListener('submit',(event) => {
 function addNewPara(para){
   let newpara = document.createElement('p');
   newpara.textContent = para;
+  newpara.className = 'newpara'
   document.querySelector('body').appendChild(newpara);
+  setTimeout(()=>newpara.remove(),4000);
 }
